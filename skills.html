@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darkfolio Nebula | Compétences</title>
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🪐</text></svg>">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: #0a0a0a;
+            color: #e5e5e5;
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #3b82f6;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after, .active-link::after {
+            width: 100%;
+        }
+        .skill-card {
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        .skill-card:hover {
+            transform: scale(1.05);
+            background-color: #1f2937; /* gray-800 */
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+    <!-- Navigation -->
+    <nav class="bg-gray-900 border-b border-gray-800 py-4 px-6 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-blue-400 flex items-center">
+                <i data-feather="moon" class="mr-2"></i>Darkfolio
+            </a>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="nav-link text-gray-300 hover:text-blue-400 font-medium">Accueil</a>
+                <a href="school.html" class="nav-link text-gray-300 hover:text-blue-400 font-medium">École</a>
+                <a href="company.html" class="nav-link text-gray-300 hover:text-blue-400 font-medium">Entreprise</a>
+                <a href="projects.html" class="nav-link text-gray-300 hover:text-blue-400 font-medium">Projets</a>
+                <a href="skills.html" class="nav-link text-blue-400 active-link font-medium">Compétences</a>
+                <a href="technological-watch.html" class="nav-link text-gray-300 hover:text-blue-400 font-medium">Veille Tech</a>
+            </div>
+            <button class="md:hidden text-gray-300" id="menu-toggle">
+                <i data-feather="menu"></i>
+            </button>
+        </div>
+        <!-- Menu Mobile -->
+        <div class="md:hidden hidden bg-gray-800 py-2 px-4" id="mobile-menu">
+            <div class="flex flex-col space-y-3">
+                <a href="index.html" class="nav-link text-gray-300 hover:text-blue-400 font-medium">Accueil</a>
+                <a href="school.html" class="nav-link text-gray-300 hover:text-blue-400 font-medium">École</a>
+                <a href="company.html" class="nav-link text-gray-300 hover:text-blue-400 font-medium">Entreprise</a>
+                <a href="projects.html" class="nav-link text-gray-300 hover:text-blue-400 font-medium">Projets</a>
+                <a href="skills.html" class="nav-link text-blue-400 font-medium">Compétences</a>
+                <a href="technological-watch.html" class="nav-link text-gray-300 hover:text-blue-400 font-medium">Veille Tech</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section Compétences -->
+    <main class="flex-grow container mx-auto px-6 py-12">
+        <h1 class="text-4xl font-bold mb-12 text-center">
+            Ensemble de Compétences <span class="text-blue-400">Techniques</span>
+        </h1>
+
+        <!-- Compétences Frontend -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold mb-8 text-left border-l-4 border-blue-400 pl-4">Frontend</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                <div class="skill-card bg-gray-800 rounded-lg p-6 flex flex-col items-center justify-center">
+                    <i data-feather="figma" class="w-12 h-12 text-blue-400 mb-3"></i><span class="font-medium">HTML5</span>
+                </div>
+                <div class="skill-card bg-gray-800 rounded-lg p-6 flex flex-col items-center justify-center">
+                    <i data-feather="figma" class="w-12 h-12 text-blue-400 mb-3"></i><span class="font-medium">CSS3</span>
+                </div>
+                <div class="skill-card bg-gray-800 rounded-lg p-6 flex flex-col items-center justify-center">
+                    <i data-feather="figma" class="w-12 h-12 text-blue-400 mb-3"></i><span class="font-medium">JavaScript</span>
+                </div>
+                <div class="skill-card bg-gray-800 rounded-lg p-6 flex flex-col items-center justify-center">
+                    <i data-feather="figma" class="w-12 h-12 text-blue-400 mb-3"></i><span class="font-medium">React</span>
+                </div>
+                <div class="skill-card bg-gray-800 rounded-lg p-6 flex flex-col items-center justify-center">
+                    <i data-feather="figma" class="w-12 h-12 text-blue-400 mb-3"></i><span class="font-medium">Vue.js</span>
+                </div>
+                <div class="skill-card bg-gray-800 rounded-lg p-6 flex flex-col items-center justify-center">
+                    <i data-feather="figma" class="w-12 h-12 text-blue-400 mb-3"></i><span class="font-medium">Tailwind CSS</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Compétences Backend -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold mb-8 text-left border-l-4 border-blue-400 pl-4">Backend</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                <div class="skill-card bg-gray-800 rounded-lg p-6 flex flex-col items-center justify-center">
+                    <i data-feather="server" class="w-12 h-12 text-blue-400 mb-3"></i><span class="font-medium">Node.js</span>
+                </div>
+                <div class="skill-card bg-gray-800 rounded-lg p-6 flex flex-col items-center justify-center">
+                    <i data-feather="server" class="w-12 h-12 text-blue-400 mb-3"></i><span class="font-medium">Express.js</span>
+                </div>
+                <div class="skill-card bg-gray-800 rounded-lg p-6 flex flex-col items-center justify-center">
+                    <i data-feather="server" class="w-12 h-12 text-blue-400 mb-3"></i><span class="font-medium">Python</span>
+                </div>
+                <div class="skill-card bg-gray-800 rounded-lg p-6 flex flex-col items-center justify-center">
+                    <i data-feather="database" class="w-12 h-12 text-blue-400 mb-3"></i><span class="font-medium">MongoDB</span>
+                </div>
+                <div class="skill-card bg-gray-800 rounded-lg p-6 flex flex-col items-center justify-center">
+                    <i data-feather="database" class="w-12 h-12 text-blue-400 mb-3"></i><span class="font-medium">PostgreSQL</span>
+                </div>
+                <div class="skill-card bg-gray-800 rounded-lg p-6 flex flex-col items-center justify-center">
+                    <i data-feather="server" class="w-12 h-12 text-blue-400 mb-3"></i><span class="font-medium">REST APIs</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Outils & DevOps -->
+        <section>
+            <h2 class="text-3xl font-bold mb-8 text-left border-l-4 border-blue-400 pl-4">Outils & DevOps</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                <div class="skill-card bg-gray-800 rounded-lg p-6 flex flex-col items-center justify-center">
+                    <i data-feather="git-branch" class="w-12 h-12 text-blue-400 mb-3"></i><span class="font-medium">Git & GitHub</span>
+                </div>
+                <div class="skill-card bg-gray-800 rounded-lg p-6 flex flex-col items-center justify-center">
+                    <i data-feather="box" class="w-12 h-12 text-blue-400 mb-3"></i><span class="font-medium">Docker</span>
+                </div>
+                <div class="skill-card bg-gray-800 rounded-lg p-6 flex flex-col items-center justify-center">
+                    <i data-feather="figma" class="w-12 h-12 text-blue-400 mb-3"></i><span class="font-medium">Figma</span>
+                </div>
+                <div class="skill-card bg-gray-800 rounded-lg p-6 flex flex-col items-center justify-center">
+                    <i data-feather="cloud" class="w-12 h-12 text-blue-400 mb-3"></i><span class="font-medium">AWS</span>
+                </div>
+                <div class="skill-card bg-gray-800 rounded-lg p-6 flex flex-col items-center justify-center">
+                    <i data-feather="terminal" class="w-12 h-12 text-blue-400 mb-3"></i><span class="font-medium">Linux</span>
+                </div>
+                 <div class="skill-card bg-gray-800 rounded-lg p-6 flex flex-col items-center justify-center">
+                    <i data-feather="shield" class="w-12 h-12 text-blue-400 mb-3"></i><span class="font-medium">Jest</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-800 py-8 mt-16">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <a href="index.html" class="text-xl font-bold text-blue-400 flex items-center">
+                        <i data-feather="moon" class="mr-2"></i>Darkfolio
+                    </a>
+                    <p class="text-gray-500 text-sm mt-2">© 2023 Darkfolio Nebula. Tous droits réservés.</p>
+                </div>
+                <div class="flex flex-wrap justify-center gap-6">
+                    <a href="index.html" class="text-gray-400 hover:text-blue-400">Accueil</a>
+                    <a href="school.html" class="text-gray-400 hover:text-blue-400">École</a>
+                    <a href="company.html" class="text-gray-400 hover:text-blue-400">Entreprise</a>
+                    <a href="projects.html" class="text-gray-400 hover:text-blue-400">Projets</a>
+                    <a href="skills.html" class="text-gray-400 hover:text-blue-400">Compétences</a>
+                    <a href="technological-watch.html" class="text-gray-400 hover:text-blue-400">Veille Tech</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+        feather.replace();
+    </script>
+</body>
+</html>
